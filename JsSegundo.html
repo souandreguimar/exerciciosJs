@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <html lang="pt-br">
+    <title> Indice de massa corporal </title>
+    </head>
+    <body>
+        
+        <form id="form1">
+            <label>Insira os Dados Para Calculo do IMC</label>    <br>
+            <input type="text" id="nome" placeholder="nome"> <br>
+            
+            <input type="text" id="altura" placeholder="altura"><br>
+            
+            <input type="text" id="peso" placeholder="peso"> <br>
+                       
+            <input type="button" onClick="imc()" value="calcular">
+            <br>
+            <br>
+            <label>Situação: <span id="resultado"></span></label>
+        </form>
+            <script>
+                function imc() {
+                let altura = document.getElementById("altura").value;
+                let peso = document.getElementById("peso").value;
+                let nome = document.getElementById("nome").value;    
+                let m = peso / (altura * altura);
+              
+        
+                    if (m < 20){
+                        document.getElementById("resultado").innerHTML = 'Baixo peso muito grave';
+                    } else if (m > 20 && m < 25) {
+                        document.getElementById("resultado").innerHTML = 'Baixo peso grave';
+                    } else if (m > 25 && m < 30) {
+                        document.getElementById("resultado").innerHTML = 'Baixo peso';
+                    } else if (m > 30 && m < 35) {
+                        document.getElementById("resultado").innerHTML = 'Peso normal';
+                    } else if (m > 35 && m < 40) {
+                        document.getElementById("resultado").innerHTML =  'Sobrepeso';
+                    } else if (m > 40 && m < 45) {
+                        document.getElementById("resultado").innerHTML =  'Obesidade de primeiro grau';
+                    } else if (m > 55 && m < 50) {
+                        document.getElementById("resultado").innerHTML =  'Obesidade de segundo grau'; 
+                    } else if (m > 50) {
+                        document.getElementById("resultado").innerHTML =  'Obesidade de terceiro grau';
+                    }
+                 }
+            </script>
+            
+            
+</body>
+</html>
+
+
+

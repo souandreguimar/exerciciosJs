@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - 1</title>
+</head>
+
+<body> 
+    <p> CALCULA DE MEDIA EM JS</p>
+
+    
+    <input type="text" id="nota1" placeholder="Insira a Primeira Nota"><br><br>
+    <input type="text" id="nota2" placeholder="Insira a Segunda Nota"><br><br>
+    
+    <button onclick="calculoMedia()"> CLIQUE AQUI PRA INICIAR</button>
+    <p>Situação do Aluno: <span id="resultado"></span> </p>
+    <script>
+        function calculoMedia(){
+            
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let media = (nota1+nota2)/2; 
+            if(media>=7){
+                document.getElementById("resultado").innerHTML = "Aprovado";
+                document.getElementById("resultado").style.color = 'green';
+
+            } else
+            {
+                document.getElementById("resultado").innerHTML = "Reprovado";
+                document.getElementById("resultado").style.color = 'red';
+        }
+    }
+</script>
+</body>
+</html>
